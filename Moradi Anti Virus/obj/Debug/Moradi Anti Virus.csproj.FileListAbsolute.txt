@@ -1,0 +1,17 @@
+C:\Users\Admin\AppData\Local\Temporary Projects\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\ExtendAero.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Form1.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\Fader Theme.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\Ubuntu Theme.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\CircularProgressBar.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\WinFormAnimation.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\CircularProgressBar.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\WinFormAnimation.xml
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csprojResolveAssemblyReference.cache
