@@ -116,19 +116,40 @@ namespace Moradi_Anti_Virus
 
         private void ubuntuButtonGray1_Click(object sender, EventArgs e)
         {
-                // temp
-                DirectoryInfo te = new DirectoryInfo("C:\\Windows\\Temp");
-                if (te.Exists)
-                    te.Delete(true);
-                
-
-                // %temp%  C:\Users\Admin\AppData\Local\Temp
-                DirectoryInfo tem = new DirectoryInfo("C:\\Users\\" + (Environment.UserName) + "AppData\\Local\\Temp");
-                if (tem.Exists)
-                    tem.Delete(true);
-
-            MessageBox.Show("All Temp Files Have Been Deleted, Enjoy Your Faster PC","Successfuly Cleared Temp Files",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            }
+            String tempFolder = Environment.ExpandEnvironmentVariables("%TEMP%");        
+            String prefetch = Environment.ExpandEnvironmentVariables("%SYSTEMROOT%") + "\\Prefetch";
+            EmptyFolderContents(tempFolder);
+            EmptyFolderContents(prefetch);    
         }
+
+        private void EmptyFolderContents(string folderName)
+        {
+            foreach (var folder in Directory.GetDirectories(folderName))
+            {
+                try
+                {
+                    Directory.Delete(folder, true);
+                }
+                catch (Exception excep)
+                {
+                    System.Diagnostics.Debug.WriteLine(excep);
+                }
+            }
+            foreach (var file in Directory.GetFiles(folderName))
+            {
+                try
+                {
+                    File.Delete(file);
+                }
+                catch (Exception excep)
+                {
+                    System.Diagnostics.Debug.WriteLine(excep);
+                }
+            }
+            faderAlertBox1.Visible = true;
+            faderAlertBox1.Text = "All Temp Files Have Been Deleted, Enjoy your Fast Speeds";
+        }
+        
     }
+}
 

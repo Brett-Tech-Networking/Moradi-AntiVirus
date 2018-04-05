@@ -67,7 +67,6 @@
             this.ubuntuButtonGray1 = new Ubuntu_Theme.UbuntuButtonGray();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
@@ -110,7 +109,6 @@
             // Scanner
             // 
             this.Scanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.Scanner.Controls.Add(this.listBox1);
             this.Scanner.Controls.Add(this.ubuntuButtonGray1);
             this.Scanner.Controls.Add(this.faderListBox1);
             this.Scanner.Controls.Add(this.faderAlertBox1);
@@ -524,14 +522,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(184, 71);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 9;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,7 +589,6 @@
         private Ubuntu_Theme.UbuntuButtonGray ubuntuButtonGray1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
