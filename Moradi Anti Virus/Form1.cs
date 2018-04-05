@@ -116,6 +116,8 @@ namespace Moradi_Anti_Virus
 
         private void ubuntuButtonGray1_Click(object sender, EventArgs e)
         {
+            ProgressBar.Start();
+
             String tempFolder = Environment.ExpandEnvironmentVariables("%TEMP%");        
             String prefetch = Environment.ExpandEnvironmentVariables("%SYSTEMROOT%") + "\\Prefetch";
             EmptyFolderContents(tempFolder);
@@ -146,10 +148,22 @@ namespace Moradi_Anti_Virus
                     System.Diagnostics.Debug.WriteLine(excep);
                 }
             }
-            faderAlertBox1.Visible = true;
-            faderAlertBox1.Text = "All Temp Files Have Been Deleted, Enjoy your Fast Speeds";
+           
         }
-        
+
+        private void ProgressBar_Tick(object sender, EventArgs e)
+        {
+            faderProgressBar1.Value += 10;
+
+            if (faderProgressBar1.Value == faderProgressBar1.Maximum)
+            {
+                faderProgressBar1.BackColor = Color.Red;
+                faderAlertBox1.Visible = true;
+                faderAlertBox1.Text = "All Temp Files Slowing Down Your Computer Have Been Deleted";
+
+                
+            }
+        }
     }
 }
 
