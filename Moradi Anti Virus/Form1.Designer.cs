@@ -139,6 +139,8 @@
             // 
             // faderAlertBox1
             // 
+            this.faderAlertBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.faderAlertBox1.BackColor = System.Drawing.Color.Transparent;
             this.faderAlertBox1.Location = new System.Drawing.Point(45, 305);
             this.faderAlertBox1.Name = "faderAlertBox1";
@@ -184,6 +186,8 @@
             // 
             // faderProgressBar1
             // 
+            this.faderProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.faderProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.faderProgressBar1.ForeColor = System.Drawing.Color.Red;
             this.faderProgressBar1.Location = new System.Drawing.Point(16, 239);
@@ -517,6 +521,9 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.BackColor = System.Drawing.Color.Black;
             this.listBox1.ForeColor = System.Drawing.Color.Lime;
             this.listBox1.FormattingEnabled = true;

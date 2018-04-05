@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AntiVirusScanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4eca7785562da9b9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AntiVirusScanner.1.0.0\lib\AntiVirusScanner.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
       <Private>True</Private>
