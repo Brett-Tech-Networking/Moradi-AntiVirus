@@ -15,3 +15,17 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi An
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\CircularProgressBar.xml
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\bin\Debug\WinFormAnimation.xml
 C:\Users\Admin\Documents\Visual Studio 2015\Projects\Moradi Anti Virus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe.config
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.exe
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.pdb
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.pdb
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\CircularProgressBar.dll
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\WinFormAnimation.dll
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\CircularProgressBar.xml
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\WinFormAnimation.xml
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Form1.resources
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.help.resources

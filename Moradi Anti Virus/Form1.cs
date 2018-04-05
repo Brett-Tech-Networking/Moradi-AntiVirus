@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Moradi_Anti_Virus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Moradi_Anti_Virus
 
         private void faderButton1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void SysInfo_Tick(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace Moradi_Anti_Virus
             }
             catch
             {
-                MessageBox.Show("Please Visit https://github.com/Brett-Tech-Networking","Our Github",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Please Visit https://github.com/Brett-Tech-Networking", "Our Github", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -106,5 +107,28 @@ namespace Moradi_Anti_Virus
         {
             faderAlertBox1.Visible = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            help h = new help();
+            h.Show();
+        }
+
+        private void ubuntuButtonGray1_Click(object sender, EventArgs e)
+        {
+                // temp
+                DirectoryInfo te = new DirectoryInfo("C:\\Windows\\Temp");
+                if (te.Exists)
+                    te.Delete(true);
+                
+
+                // %temp%  C:\Users\Admin\AppData\Local\Temp
+                DirectoryInfo tem = new DirectoryInfo("C:\\Users\\" + (Environment.UserName) + "AppData\\Local\\Temp");
+                if (tem.Exists)
+                    tem.Delete(true);
+
+            MessageBox.Show("All Temp Files Have Been Deleted, Enjoy Your Faster PC","Successfuly Cleared Temp Files",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+        }
     }
-}
+
