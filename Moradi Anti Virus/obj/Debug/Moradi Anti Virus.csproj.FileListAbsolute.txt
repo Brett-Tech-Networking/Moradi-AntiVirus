@@ -31,3 +31,4 @@ C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Mor
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.help.resources
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\AntiVirusScanner.dll
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\AntiVirusScanner.xml
+C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.frmRunTask.resources

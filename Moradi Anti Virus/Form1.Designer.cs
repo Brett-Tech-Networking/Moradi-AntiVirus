@@ -42,6 +42,8 @@
             this.faderProgressBar1 = new Fader_Theme.FaderProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.cpuram = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ubuntuButtonGray5 = new Ubuntu_Theme.UbuntuButtonGray();
             this.faderListBox1 = new Fader_Theme.FaderListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,7 +72,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
-            this.ubuntuButtonGray5 = new Ubuntu_Theme.UbuntuButtonGray();
+            this.ubuntuButtonGray6 = new Ubuntu_Theme.UbuntuButtonGray();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
@@ -231,6 +233,8 @@
             // cpuram
             // 
             this.cpuram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cpuram.Controls.Add(this.ubuntuButtonGray6);
+            this.cpuram.Controls.Add(this.label3);
             this.cpuram.Controls.Add(this.pictureBox1);
             this.cpuram.Controls.Add(this.ubuntuButtonGray5);
             this.cpuram.Controls.Add(this.faderListBox1);
@@ -242,7 +246,30 @@
             this.cpuram.Name = "cpuram";
             this.cpuram.Size = new System.Drawing.Size(727, 393);
             this.cpuram.TabIndex = 2;
-            this.cpuram.Text = "CPU & RAM";
+            this.cpuram.Text = "TaskMgr | CPU/RAM";
+            this.cpuram.Click += new System.EventHandler(this.cpuram_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(469, -3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Task Manager";
+            // 
+            // ubuntuButtonGray5
+            // 
+            this.ubuntuButtonGray5.BackColor = System.Drawing.Color.Transparent;
+            this.ubuntuButtonGray5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
+            this.ubuntuButtonGray5.Location = new System.Drawing.Point(530, 369);
+            this.ubuntuButtonGray5.Name = "ubuntuButtonGray5";
+            this.ubuntuButtonGray5.Size = new System.Drawing.Size(75, 23);
+            this.ubuntuButtonGray5.TabIndex = 8;
+            this.ubuntuButtonGray5.Text = "Kill Task";
+            this.ubuntuButtonGray5.Click += new System.EventHandler(this.ubuntuButtonGray5_Click);
             // 
             // faderListBox1
             // 
@@ -252,7 +279,7 @@
             this.faderListBox1.ForeColor = System.Drawing.Color.White;
             this.faderListBox1.FormattingEnabled = true;
             this.faderListBox1.ItemHeight = 20;
-            this.faderListBox1.Location = new System.Drawing.Point(360, 15);
+            this.faderListBox1.Location = new System.Drawing.Point(360, 12);
             this.faderListBox1.Name = "faderListBox1";
             this.faderListBox1.Size = new System.Drawing.Size(335, 360);
             this.faderListBox1.Sorted = true;
@@ -563,16 +590,16 @@
             this.TaskmgrTimer.Enabled = true;
             this.TaskmgrTimer.Tick += new System.EventHandler(this.TaskmgrTimer_Tick);
             // 
-            // ubuntuButtonGray5
+            // ubuntuButtonGray6
             // 
-            this.ubuntuButtonGray5.BackColor = System.Drawing.Color.Transparent;
-            this.ubuntuButtonGray5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
-            this.ubuntuButtonGray5.Location = new System.Drawing.Point(279, 352);
-            this.ubuntuButtonGray5.Name = "ubuntuButtonGray5";
-            this.ubuntuButtonGray5.Size = new System.Drawing.Size(75, 23);
-            this.ubuntuButtonGray5.TabIndex = 8;
-            this.ubuntuButtonGray5.Text = "Kill Task";
-            this.ubuntuButtonGray5.Click += new System.EventHandler(this.ubuntuButtonGray5_Click);
+            this.ubuntuButtonGray6.BackColor = System.Drawing.Color.Transparent;
+            this.ubuntuButtonGray6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
+            this.ubuntuButtonGray6.Location = new System.Drawing.Point(410, 369);
+            this.ubuntuButtonGray6.Name = "ubuntuButtonGray6";
+            this.ubuntuButtonGray6.Size = new System.Drawing.Size(112, 23);
+            this.ubuntuButtonGray6.TabIndex = 11;
+            this.ubuntuButtonGray6.Text = "Run New Task";
+            this.ubuntuButtonGray6.Click += new System.EventHandler(this.ubuntuButtonGray6_Click);
             // 
             // pictureBox1
             // 
@@ -658,6 +685,8 @@
         private System.Windows.Forms.Timer TaskmgrTimer;
         private Ubuntu_Theme.UbuntuButtonGray ubuntuButtonGray5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private Ubuntu_Theme.UbuntuButtonGray ubuntuButtonGray6;
     }
 }
 

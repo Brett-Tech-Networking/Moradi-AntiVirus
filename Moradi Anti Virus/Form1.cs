@@ -12,6 +12,15 @@ namespace Moradi_Anti_Virus
         {
             InitializeComponent();
         }
+        Process[] proc;
+
+        void GetAllProcess()
+        {
+            proc = Process.GetProcesses();
+            faderListBox1.Items.Clear();
+            foreach (Process p in proc)
+                faderListBox1.Items.Add(p.ProcessName);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -113,10 +122,10 @@ namespace Moradi_Anti_Virus
         {
             ProgressBar.Start();
 
-            String tempFolder = Environment.ExpandEnvironmentVariables("%TEMP%");        
+            String tempFolder = Environment.ExpandEnvironmentVariables("%TEMP%");
             String prefetch = Environment.ExpandEnvironmentVariables("%SYSTEMROOT%") + "\\Prefetch";
             EmptyFolderContents(tempFolder);
-            EmptyFolderContents(prefetch);    
+            EmptyFolderContents(prefetch);
         }
 
         private void EmptyFolderContents(string folderName)
@@ -143,7 +152,7 @@ namespace Moradi_Anti_Virus
                     System.Diagnostics.Debug.WriteLine(excep);
                 }
             }
-           
+
         }
 
         private void ProgressBar_Tick(object sender, EventArgs e)
@@ -156,7 +165,7 @@ namespace Moradi_Anti_Virus
                 faderAlertBox1.Visible = true;
                 faderAlertBox1.Text = "All Temp Files Slowing Down Your Computer Have Been Deleted";
 
-                
+
             }
         }
 
@@ -167,36 +176,25 @@ namespace Moradi_Anti_Virus
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void TaskmgrTimer_Tick(object sender, EventArgs e)
         {
-            faderListBox1.Items.Clear();
-            Process[] MyProcess = Process.GetProcesses();
-            for (int i = 0; i < MyProcess.Length; i++)
-                faderListBox1.Items.Add(MyProcess[i].ProcessName);
+            GetAllProcess();
             TaskmgrTimer.Stop();
         }
 
         private void ubuntuButtonGray5_Click(object sender, EventArgs e)
         {
-            foreach (System.Diagnostics.Process p in
-
-           System.Diagnostics.Process.GetProcesses())
-
+            try
             {
-                string[] arr = faderListBox1.SelectedItem.ToString().Split('-');
-                string sProcess = arr[0].Trim();
-                int iId = Convert.ToInt32(arr[1].Trim());
-                if (p.ProcessName == sProcess && p.Id == iId)
-                {
-                    p.Kill();
-                }
-                faderListBox1.Items.Clear();
-                Process[] MyProcess = Process.GetProcesses();
-                for (int i = 0; i < MyProcess.Length; i++)
-                    faderListBox1.Items.Add(MyProcess[i].ProcessName);
+                proc[faderListBox1.SelectedIndex].Kill();
+                GetAllProcess();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could Not Stop Task","ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -207,6 +205,20 @@ namespace Moradi_Anti_Virus
             for (int i = 0; i < MyProcess.Length; i++)
                 faderListBox1.Items.Add(MyProcess[i].ProcessName);
             
+        }
+
+        private void ubuntuButtonGray6_Click(object sender, EventArgs e)
+        {
+            using (frmRunTask frm = new frmRunTask())
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                    GetAllProcess();
+            }
+        }
+
+        private void cpuram_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
