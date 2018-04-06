@@ -220,6 +220,19 @@ namespace Moradi_Anti_Virus
         {
 
         }
+
+        private void ubuntuButtonOrange1_Click(object sender, EventArgs e)
+        {
+            faderListBox1.SelectedItems.Clear();
+            for (int i = faderListBox1.Items.Count - 1; i >= 0;i-- )
+            {
+                if (faderListBox1.Items[i].ToString().ToLower().Contains(ubuntuTextBox1.Text.ToLower()))
+                {
+                    faderListBox1.SetSelected(i, true);
+                }
+            }
+            label6.Text = faderListBox1.SelectedItems.Count.ToString()+ " Items Found" ;
+        }
     }
 }
 
