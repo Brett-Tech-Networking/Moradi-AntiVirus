@@ -175,7 +175,38 @@ namespace Moradi_Anti_Virus
             faderListBox1.Items.Clear();
             Process[] MyProcess = Process.GetProcesses();
             for (int i = 0; i < MyProcess.Length; i++)
-                faderListBox1.Items.Add(MyProcess[i].ProcessName + "-" + MyProcess[i].Id);
+                faderListBox1.Items.Add(MyProcess[i].ProcessName);
+            TaskmgrTimer.Stop();
+        }
+
+        private void ubuntuButtonGray5_Click(object sender, EventArgs e)
+        {
+            foreach (System.Diagnostics.Process p in
+
+           System.Diagnostics.Process.GetProcesses())
+
+            {
+                string[] arr = faderListBox1.SelectedItem.ToString().Split('-');
+                string sProcess = arr[0].Trim();
+                int iId = Convert.ToInt32(arr[1].Trim());
+                if (p.ProcessName == sProcess && p.Id == iId)
+                {
+                    p.Kill();
+                }
+                faderListBox1.Items.Clear();
+                Process[] MyProcess = Process.GetProcesses();
+                for (int i = 0; i < MyProcess.Length; i++)
+                    faderListBox1.Items.Add(MyProcess[i].ProcessName);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            faderListBox1.Items.Clear();
+            Process[] MyProcess = Process.GetProcesses();
+            for (int i = 0; i < MyProcess.Length; i++)
+                faderListBox1.Items.Add(MyProcess[i].ProcessName);
+            
         }
     }
 }

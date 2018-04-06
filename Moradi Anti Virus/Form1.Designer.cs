@@ -42,6 +42,7 @@
             this.faderProgressBar1 = new Fader_Theme.FaderProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.cpuram = new System.Windows.Forms.TabPage();
+            this.faderListBox1 = new Fader_Theme.FaderListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
@@ -68,9 +69,9 @@
             this.SysInfo = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.faderListBox1 = new Fader_Theme.FaderListBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
+            this.ubuntuButtonGray5 = new Ubuntu_Theme.UbuntuButtonGray();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
@@ -81,6 +82,7 @@
             this.faderPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ubuntuTheme1
@@ -229,7 +231,8 @@
             // cpuram
             // 
             this.cpuram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.cpuram.Controls.Add(this.button4);
+            this.cpuram.Controls.Add(this.pictureBox1);
+            this.cpuram.Controls.Add(this.ubuntuButtonGray5);
             this.cpuram.Controls.Add(this.faderListBox1);
             this.cpuram.Controls.Add(this.label4);
             this.cpuram.Controls.Add(this.label5);
@@ -240,6 +243,20 @@
             this.cpuram.Size = new System.Drawing.Size(727, 393);
             this.cpuram.TabIndex = 2;
             this.cpuram.Text = "CPU & RAM";
+            // 
+            // faderListBox1
+            // 
+            this.faderListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.faderListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.faderListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.faderListBox1.ForeColor = System.Drawing.Color.White;
+            this.faderListBox1.FormattingEnabled = true;
+            this.faderListBox1.ItemHeight = 20;
+            this.faderListBox1.Location = new System.Drawing.Point(360, 15);
+            this.faderListBox1.Name = "faderListBox1";
+            this.faderListBox1.Size = new System.Drawing.Size(335, 360);
+            this.faderListBox1.Sorted = true;
+            this.faderListBox1.TabIndex = 7;
             // 
             // label4
             // 
@@ -541,34 +558,32 @@
             // 
             this.ProgressBar.Tick += new System.EventHandler(this.ProgressBar_Tick);
             // 
-            // faderListBox1
-            // 
-            this.faderListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.faderListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.faderListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.faderListBox1.ForeColor = System.Drawing.Color.White;
-            this.faderListBox1.FormattingEnabled = true;
-            this.faderListBox1.ItemHeight = 20;
-            this.faderListBox1.Location = new System.Drawing.Point(375, 15);
-            this.faderListBox1.Name = "faderListBox1";
-            this.faderListBox1.Size = new System.Drawing.Size(335, 360);
-            this.faderListBox1.Sorted = true;
-            this.faderListBox1.TabIndex = 7;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(126, 277);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // TaskmgrTimer
             // 
             this.TaskmgrTimer.Enabled = true;
             this.TaskmgrTimer.Tick += new System.EventHandler(this.TaskmgrTimer_Tick);
+            // 
+            // ubuntuButtonGray5
+            // 
+            this.ubuntuButtonGray5.BackColor = System.Drawing.Color.Transparent;
+            this.ubuntuButtonGray5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
+            this.ubuntuButtonGray5.Location = new System.Drawing.Point(279, 352);
+            this.ubuntuButtonGray5.Name = "ubuntuButtonGray5";
+            this.ubuntuButtonGray5.Size = new System.Drawing.Size(75, 23);
+            this.ubuntuButtonGray5.TabIndex = 8;
+            this.ubuntuButtonGray5.Text = "Kill Task";
+            this.ubuntuButtonGray5.Click += new System.EventHandler(this.ubuntuButtonGray5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.refresh;
+            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -594,6 +609,7 @@
             this.faderPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -639,8 +655,9 @@
         private System.Windows.Forms.Timer ProgressBar;
         private System.Windows.Forms.ListBox listBox1;
         private Fader_Theme.FaderListBox faderListBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Timer TaskmgrTimer;
+        private Ubuntu_Theme.UbuntuButtonGray ubuntuButtonGray5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
