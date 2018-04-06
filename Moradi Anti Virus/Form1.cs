@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Moradi_Anti_Virus
 {
@@ -163,6 +158,24 @@ namespace Moradi_Anti_Virus
 
                 
             }
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void TaskmgrTimer_Tick(object sender, EventArgs e)
+        {
+            faderListBox1.Items.Clear();
+            Process[] MyProcess = Process.GetProcesses();
+            for (int i = 0; i < MyProcess.Length; i++)
+                faderListBox1.Items.Add(MyProcess[i].ProcessName + "-" + MyProcess[i].Id);
         }
     }
 }

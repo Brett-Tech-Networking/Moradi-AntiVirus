@@ -33,6 +33,7 @@
             this.ubuntuTheme1 = new Ubuntu_Theme.UbuntuTheme();
             this.faderTabControl1 = new Fader_Theme.FaderTabControl();
             this.Scanner = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.ubuntuButtonGray1 = new Ubuntu_Theme.UbuntuButtonGray();
             this.faderAlertBox1 = new Fader_Theme.FaderAlertBox();
             this.ubuntuButtonGray4 = new Ubuntu_Theme.UbuntuButtonGray();
@@ -67,7 +68,9 @@
             this.SysInfo = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.faderListBox1 = new Fader_Theme.FaderListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
@@ -125,6 +128,19 @@
             this.Scanner.TabIndex = 0;
             this.Scanner.Text = "Scanner";
             this.Scanner.Click += new System.EventHandler(this.Scanner_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.ForeColor = System.Drawing.Color.Lime;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(171, 52);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(529, 173);
+            this.listBox1.TabIndex = 9;
             // 
             // ubuntuButtonGray1
             // 
@@ -213,6 +229,8 @@
             // cpuram
             // 
             this.cpuram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.cpuram.Controls.Add(this.button4);
+            this.cpuram.Controls.Add(this.faderListBox1);
             this.cpuram.Controls.Add(this.label4);
             this.cpuram.Controls.Add(this.label5);
             this.cpuram.Controls.Add(this.circularProgressBar2);
@@ -228,7 +246,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(435, 272);
+            this.label4.Location = new System.Drawing.Point(227, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 25);
             this.label4.TabIndex = 6;
@@ -239,7 +257,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Lime;
-            this.label5.Location = new System.Drawing.Point(234, 272);
+            this.label5.Location = new System.Drawing.Point(58, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 25);
             this.label5.TabIndex = 5;
@@ -255,7 +273,7 @@
             this.circularProgressBar2.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBar2.InnerMargin = 2;
             this.circularProgressBar2.InnerWidth = -1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(384, 95);
+            this.circularProgressBar2.Location = new System.Drawing.Point(173, 5);
             this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar2.Name = "circularProgressBar2";
             this.circularProgressBar2.OuterColor = System.Drawing.Color.Gray;
@@ -286,7 +304,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(182, 97);
+            this.circularProgressBar1.Location = new System.Drawing.Point(6, 5);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
@@ -515,22 +533,42 @@
             this.SysInfo.Enabled = true;
             this.SysInfo.Tick += new System.EventHandler(this.SysInfo_Tick);
             // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
+            // 
             // ProgressBar
             // 
             this.ProgressBar.Tick += new System.EventHandler(this.ProgressBar_Tick);
             // 
-            // listBox1
+            // faderListBox1
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.BackColor = System.Drawing.Color.Black;
-            this.listBox1.ForeColor = System.Drawing.Color.Lime;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(171, 52);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(529, 173);
-            this.listBox1.TabIndex = 9;
+            this.faderListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.faderListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.faderListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.faderListBox1.ForeColor = System.Drawing.Color.White;
+            this.faderListBox1.FormattingEnabled = true;
+            this.faderListBox1.ItemHeight = 20;
+            this.faderListBox1.Location = new System.Drawing.Point(375, 15);
+            this.faderListBox1.Name = "faderListBox1";
+            this.faderListBox1.Size = new System.Drawing.Size(335, 360);
+            this.faderListBox1.Sorted = true;
+            this.faderListBox1.TabIndex = 7;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(126, 277);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // TaskmgrTimer
+            // 
+            this.TaskmgrTimer.Enabled = true;
+            this.TaskmgrTimer.Tick += new System.EventHandler(this.TaskmgrTimer_Tick);
             // 
             // Form1
             // 
@@ -600,6 +638,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer ProgressBar;
         private System.Windows.Forms.ListBox listBox1;
+        private Fader_Theme.FaderListBox faderListBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer TaskmgrTimer;
     }
 }
 
