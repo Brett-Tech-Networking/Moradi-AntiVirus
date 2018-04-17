@@ -42,15 +42,18 @@
             this.faderProgressBar1 = new Fader_Theme.FaderProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.cpuram = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ubuntuButtonOrange1 = new Ubuntu_Theme.UbuntuButtonOrange();
+            this.ubuntuTextBox1 = new Ubuntu_Theme.UbuntuTextBox();
             this.ubuntuButtonGray6 = new Ubuntu_Theme.UbuntuButtonGray();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ubuntuButtonGray5 = new Ubuntu_Theme.UbuntuButtonGray();
             this.faderListBox1 = new Fader_Theme.FaderListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.AdvancedTools = new System.Windows.Forms.TabPage();
             this.About = new System.Windows.Forms.TabPage();
             this.faderPanel3 = new Fader_Theme.FaderPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -74,21 +77,20 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
-            this.AdvancedTools = new System.Windows.Forms.TabPage();
-            this.ubuntuTextBox1 = new Ubuntu_Theme.UbuntuTextBox();
-            this.ubuntuButtonOrange1 = new Ubuntu_Theme.UbuntuButtonOrange();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
             this.cpuram.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.AdvancedTools.SuspendLayout();
             this.About.SuspendLayout();
             this.faderPanel3.SuspendLayout();
             this.faderPanel2.SuspendLayout();
             this.faderPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ubuntuTheme1
@@ -243,8 +245,8 @@
             this.cpuram.Controls.Add(this.ubuntuTextBox1);
             this.cpuram.Controls.Add(this.ubuntuButtonGray6);
             this.cpuram.Controls.Add(this.label3);
-            this.cpuram.Controls.Add(this.pictureBox1);
             this.cpuram.Controls.Add(this.ubuntuButtonGray5);
+            this.cpuram.Controls.Add(this.pictureBox1);
             this.cpuram.Controls.Add(this.faderListBox1);
             this.cpuram.Controls.Add(this.label4);
             this.cpuram.Controls.Add(this.label5);
@@ -256,6 +258,40 @@
             this.cpuram.TabIndex = 2;
             this.cpuram.Text = "TaskMgr | CPU/RAM";
             this.cpuram.Click += new System.EventHandler(this.cpuram_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Yellow;
+            this.label6.Location = new System.Drawing.Point(560, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Status";
+            // 
+            // ubuntuButtonOrange1
+            // 
+            this.ubuntuButtonOrange1.BackColor = System.Drawing.Color.Transparent;
+            this.ubuntuButtonOrange1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ubuntuButtonOrange1.Location = new System.Drawing.Point(660, 361);
+            this.ubuntuButtonOrange1.Name = "ubuntuButtonOrange1";
+            this.ubuntuButtonOrange1.Size = new System.Drawing.Size(59, 29);
+            this.ubuntuButtonOrange1.TabIndex = 13;
+            this.ubuntuButtonOrange1.Text = "Search";
+            this.ubuntuButtonOrange1.Click += new System.EventHandler(this.ubuntuButtonOrange1_Click);
+            // 
+            // ubuntuTextBox1
+            // 
+            this.ubuntuTextBox1.BackColor = System.Drawing.Color.White;
+            this.ubuntuTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.ubuntuTextBox1.Location = new System.Drawing.Point(537, 364);
+            this.ubuntuTextBox1.MaxLength = 32767;
+            this.ubuntuTextBox1.Name = "ubuntuTextBox1";
+            this.ubuntuTextBox1.Size = new System.Drawing.Size(117, 26);
+            this.ubuntuTextBox1.TabIndex = 12;
+            this.ubuntuTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ubuntuTextBox1.UseSystemPasswordChar = false;
             // 
             // ubuntuButtonGray6
             // 
@@ -278,17 +314,6 @@
             this.label3.Size = new System.Drawing.Size(111, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Task Manager";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.refresh;
-            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ubuntuButtonGray5
             // 
@@ -367,6 +392,7 @@
             this.circularProgressBar2.SuperscriptText = "";
             this.circularProgressBar2.TabIndex = 3;
             this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar2.Value = 68;
             // 
             // circularProgressBar1
             // 
@@ -397,6 +423,17 @@
             this.circularProgressBar1.SuperscriptText = "";
             this.circularProgressBar1.TabIndex = 4;
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar1.Value = 68;
+            // 
+            // AdvancedTools
+            // 
+            this.AdvancedTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.AdvancedTools.Controls.Add(this.metroButton1);
+            this.AdvancedTools.Location = new System.Drawing.Point(4, 39);
+            this.AdvancedTools.Name = "AdvancedTools";
+            this.AdvancedTools.Size = new System.Drawing.Size(727, 393);
+            this.AdvancedTools.TabIndex = 3;
+            this.AdvancedTools.Text = "Advanced Tools";
             // 
             // About
             // 
@@ -619,48 +656,30 @@
             this.TaskmgrTimer.Enabled = true;
             this.TaskmgrTimer.Tick += new System.EventHandler(this.TaskmgrTimer_Tick);
             // 
-            // AdvancedTools
+            // pictureBox1
             // 
-            this.AdvancedTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.AdvancedTools.Location = new System.Drawing.Point(4, 39);
-            this.AdvancedTools.Name = "AdvancedTools";
-            this.AdvancedTools.Size = new System.Drawing.Size(727, 393);
-            this.AdvancedTools.TabIndex = 3;
-            this.AdvancedTools.Text = "Advanced Tools";
+            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.refresh;
+            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // ubuntuTextBox1
+            // metroButton1
             // 
-            this.ubuntuTextBox1.BackColor = System.Drawing.Color.White;
-            this.ubuntuTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.ubuntuTextBox1.Location = new System.Drawing.Point(537, 364);
-            this.ubuntuTextBox1.MaxLength = 32767;
-            this.ubuntuTextBox1.Name = "ubuntuTextBox1";
-            this.ubuntuTextBox1.Size = new System.Drawing.Size(117, 26);
-            this.ubuntuTextBox1.TabIndex = 12;
-            this.ubuntuTextBox1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.ubuntuTextBox1.UseSystemPasswordChar = false;
-            // 
-            // ubuntuButtonOrange1
-            // 
-            this.ubuntuButtonOrange1.BackColor = System.Drawing.Color.Transparent;
-            this.ubuntuButtonOrange1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ubuntuButtonOrange1.Location = new System.Drawing.Point(660, 361);
-            this.ubuntuButtonOrange1.Name = "ubuntuButtonOrange1";
-            this.ubuntuButtonOrange1.Size = new System.Drawing.Size(59, 29);
-            this.ubuntuButtonOrange1.TabIndex = 13;
-            this.ubuntuButtonOrange1.Text = "Search";
-            this.ubuntuButtonOrange1.Click += new System.EventHandler(this.ubuntuButtonOrange1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(560, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Status";
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.Highlight = true;
+            this.metroButton1.Location = new System.Drawing.Point(7, 6);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(105, 53);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "Calculator";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // Form1
             // 
@@ -679,7 +698,7 @@
             this.Scanner.PerformLayout();
             this.cpuram.ResumeLayout(false);
             this.cpuram.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.AdvancedTools.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.faderPanel3.ResumeLayout(false);
             this.faderPanel3.PerformLayout();
@@ -687,6 +706,7 @@
             this.faderPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -741,6 +761,7 @@
         private Ubuntu_Theme.UbuntuTextBox ubuntuTextBox1;
         private System.Windows.Forms.TabPage AdvancedTools;
         private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 

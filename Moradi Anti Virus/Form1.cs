@@ -233,6 +233,24 @@ namespace Moradi_Anti_Virus
             }
             label6.Text = faderListBox1.SelectedItems.Count.ToString()+ " Items Found" ;
         }
+
+        private void faderButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Caculator c = new Caculator();
+                c.Show();
+            }
+            catch
+            {
+                MessageBox.Show("There was an issue opining The Calculator","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
