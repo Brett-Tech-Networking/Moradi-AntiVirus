@@ -48,12 +48,14 @@
             this.ubuntuButtonGray6 = new Ubuntu_Theme.UbuntuButtonGray();
             this.label3 = new System.Windows.Forms.Label();
             this.ubuntuButtonGray5 = new Ubuntu_Theme.UbuntuButtonGray();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.faderListBox1 = new Fader_Theme.FaderListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.AdvancedTools = new System.Windows.Forms.TabPage();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.About = new System.Windows.Forms.TabPage();
             this.faderPanel3 = new Fader_Theme.FaderPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -77,12 +79,11 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.ubuntuTheme1.SuspendLayout();
             this.faderTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
             this.cpuram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AdvancedTools.SuspendLayout();
             this.About.SuspendLayout();
             this.faderPanel3.SuspendLayout();
@@ -90,7 +91,6 @@
             this.faderPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ubuntuTheme1
@@ -150,16 +150,16 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(171, 52);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(529, 173);
+            this.listBox1.Size = new System.Drawing.Size(529, 225);
             this.listBox1.TabIndex = 9;
             // 
             // ubuntuButtonGray1
             // 
             this.ubuntuButtonGray1.BackColor = System.Drawing.Color.Transparent;
             this.ubuntuButtonGray1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
-            this.ubuntuButtonGray1.Location = new System.Drawing.Point(25, 182);
+            this.ubuntuButtonGray1.Location = new System.Drawing.Point(48, 244);
             this.ubuntuButtonGray1.Name = "ubuntuButtonGray1";
-            this.ubuntuButtonGray1.Size = new System.Drawing.Size(117, 23);
+            this.ubuntuButtonGray1.Size = new System.Drawing.Size(117, 31);
             this.ubuntuButtonGray1.TabIndex = 8;
             this.ubuntuButtonGray1.Text = "Delete Cache";
             this.ubuntuButtonGray1.Click += new System.EventHandler(this.ubuntuButtonGray1_Click);
@@ -169,7 +169,7 @@
             this.faderAlertBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.faderAlertBox1.BackColor = System.Drawing.Color.Transparent;
-            this.faderAlertBox1.Location = new System.Drawing.Point(45, 305);
+            this.faderAlertBox1.Location = new System.Drawing.Point(35, 355);
             this.faderAlertBox1.Name = "faderAlertBox1";
             this.faderAlertBox1.Size = new System.Drawing.Size(643, 30);
             this.faderAlertBox1.Style = Fader_Theme.FaderAlertBox.AlertStyle.Info;
@@ -182,9 +182,9 @@
             // 
             this.ubuntuButtonGray4.BackColor = System.Drawing.Color.Transparent;
             this.ubuntuButtonGray4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
-            this.ubuntuButtonGray4.Location = new System.Drawing.Point(25, 142);
+            this.ubuntuButtonGray4.Location = new System.Drawing.Point(48, 126);
             this.ubuntuButtonGray4.Name = "ubuntuButtonGray4";
-            this.ubuntuButtonGray4.Size = new System.Drawing.Size(117, 23);
+            this.ubuntuButtonGray4.Size = new System.Drawing.Size(117, 31);
             this.ubuntuButtonGray4.TabIndex = 5;
             this.ubuntuButtonGray4.Text = "Custom Scan";
             this.ubuntuButtonGray4.Click += new System.EventHandler(this.ubuntuButtonGray4_Click);
@@ -193,9 +193,9 @@
             // 
             this.ubuntuButtonGray3.BackColor = System.Drawing.Color.Transparent;
             this.ubuntuButtonGray3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
-            this.ubuntuButtonGray3.Location = new System.Drawing.Point(25, 113);
+            this.ubuntuButtonGray3.Location = new System.Drawing.Point(48, 89);
             this.ubuntuButtonGray3.Name = "ubuntuButtonGray3";
-            this.ubuntuButtonGray3.Size = new System.Drawing.Size(117, 23);
+            this.ubuntuButtonGray3.Size = new System.Drawing.Size(117, 31);
             this.ubuntuButtonGray3.TabIndex = 4;
             this.ubuntuButtonGray3.Text = "Full Scan";
             this.ubuntuButtonGray3.Click += new System.EventHandler(this.ubuntuButtonGray3_Click);
@@ -204,9 +204,9 @@
             // 
             this.ubuntuButtonGray2.BackColor = System.Drawing.Color.Transparent;
             this.ubuntuButtonGray2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(84)))), ((int)(((byte)(82)))));
-            this.ubuntuButtonGray2.Location = new System.Drawing.Point(25, 84);
+            this.ubuntuButtonGray2.Location = new System.Drawing.Point(48, 52);
             this.ubuntuButtonGray2.Name = "ubuntuButtonGray2";
-            this.ubuntuButtonGray2.Size = new System.Drawing.Size(117, 23);
+            this.ubuntuButtonGray2.Size = new System.Drawing.Size(117, 31);
             this.ubuntuButtonGray2.TabIndex = 3;
             this.ubuntuButtonGray2.Text = "Quick Scan";
             this.ubuntuButtonGray2.Click += new System.EventHandler(this.ubuntuButtonGray2_Click);
@@ -217,7 +217,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.faderProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.faderProgressBar1.ForeColor = System.Drawing.Color.Red;
-            this.faderProgressBar1.Location = new System.Drawing.Point(16, 239);
+            this.faderProgressBar1.Location = new System.Drawing.Point(16, 281);
             this.faderProgressBar1.Maximum = 100;
             this.faderProgressBar1.Name = "faderProgressBar1";
             this.faderProgressBar1.ShowPercentage = true;
@@ -325,6 +325,17 @@
             this.ubuntuButtonGray5.TabIndex = 8;
             this.ubuntuButtonGray5.Text = "Kill Task";
             this.ubuntuButtonGray5.Click += new System.EventHandler(this.ubuntuButtonGray5_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.refresh;
+            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // faderListBox1
             // 
@@ -434,6 +445,20 @@
             this.AdvancedTools.Size = new System.Drawing.Size(727, 393);
             this.AdvancedTools.TabIndex = 3;
             this.AdvancedTools.Text = "Advanced Tools";
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.Highlight = true;
+            this.metroButton1.Location = new System.Drawing.Point(7, 6);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(105, 53);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "Calculator";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // About
             // 
@@ -656,31 +681,6 @@
             this.TaskmgrTimer.Enabled = true;
             this.TaskmgrTimer.Tick += new System.EventHandler(this.TaskmgrTimer_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.refresh;
-            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Highlight = true;
-            this.metroButton1.Location = new System.Drawing.Point(7, 6);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(105, 53);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Calculator";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,6 +698,7 @@
             this.Scanner.PerformLayout();
             this.cpuram.ResumeLayout(false);
             this.cpuram.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AdvancedTools.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.faderPanel3.ResumeLayout(false);
@@ -706,7 +707,6 @@
             this.faderPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
