@@ -45,7 +45,7 @@
       <HintPath>..\..\..\..\..\Desktop\ExtendAero.dll</HintPath>
     </Reference>
     <Reference Include="Fader Theme">
-      <HintPath>..\..\..\..\..\Desktop\programmig themes dll's\Fader Theme.dll</HintPath>
+      <HintPath>..\packages\Fader Theme.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -72,7 +72,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Ubuntu Theme">
-      <HintPath>..\..\..\..\..\Desktop\programmig themes dll's\Ubuntu Theme.dll</HintPath>
+      <HintPath>..\packages\Ubuntu Theme.dll</HintPath>
     </Reference>
     <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>

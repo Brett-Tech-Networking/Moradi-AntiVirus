@@ -36,3 +36,26 @@ C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Mor
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.exe
 C:\Users\Admin\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.pdb
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe.config
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.exe
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.pdb
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.exe
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Moradi Anti Virus.pdb
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\AntiVirusScanner.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\CircularProgressBar.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Fader Theme.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\MetroFramework.Design.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\MetroFramework.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\Ubuntu Theme.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\WinFormAnimation.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\AntiVirusScanner.xml
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\CircularProgressBar.xml
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\WinFormAnimation.xml
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csprojResolveAssemblyReference.cache
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Caculator.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Form1.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.frmRunTask.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.help.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Properties.Resources.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csproj.GenerateResource.Cache
