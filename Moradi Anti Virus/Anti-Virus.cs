@@ -25,7 +25,7 @@ namespace Moradi_Anti_Virus
 
         private void Anti_Virus_Load(object sender, EventArgs e)
         {
-
+            CPURAM.Start();
         }
 
         private void QuickScan_Click(object sender, EventArgs e)
@@ -75,16 +75,14 @@ namespace Moradi_Anti_Virus
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            float fcpu = CPU.NextValue();
-            float dram = RAM.NextValue();
-
-            // cpu
-            circularProgressBar1.Value = (int)fcpu;
-            circularProgressBar1.Text = string.Format("{0:0.00}%", fcpu);
-
-            // ram
-            circularProgressBar2.Value = (int)dram;
-            circularProgressBar2.Text = string.Format("{0:0.00}%", dram);
+            float fcpu = pCPU.NextValue();
+            float fram = pRAM.NextValue();
+            metroProgressBar2.Value = (int)fcpu;
+            metroProgressBar3.Value = (int)fram;
+            CPUPercent.Text = string.Format("{0:0.00}%", fcpu);
+            RAMPercent.Text = string.Format("{0:0.00}%", fram);
+            chart1.Series["CPU"].Points.AddY(fcpu);
+            chart1.Series["RAM"].Points.AddY(fram);
         }
 
         private void SysInfo_Tick(object sender, EventArgs e)

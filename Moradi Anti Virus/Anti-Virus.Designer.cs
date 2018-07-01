@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anti_Virus));
             this.QuickScan = new MetroFramework.Controls.MetroButton();
             this.FullScan = new MetroFramework.Controls.MetroButton();
@@ -37,6 +41,7 @@
             this.DelCache = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.Scanner = new MetroFramework.Controls.MetroTabPage();
+            this.time = new MetroFramework.Controls.MetroLabel();
             this.Opacity = new MetroFramework.Controls.MetroLabel();
             this.metroTrackBar1 = new MetroFramework.Controls.MetroTrackBar();
             this.faderAlertBox1 = new Fader_Theme.FaderAlertBox();
@@ -67,15 +72,22 @@
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.TopMostOnOff = new MetroFramework.Controls.MetroLabel();
             this.CPURAM = new System.Windows.Forms.Timer(this.components);
-            this.CPU = new System.Diagnostics.PerformanceCounter();
-            this.RAM = new System.Diagnostics.PerformanceCounter();
+            this.pCPU = new System.Diagnostics.PerformanceCounter();
+            this.pRAM = new System.Diagnostics.PerformanceCounter();
             this.SysInfo = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.ProgressBar = new System.Windows.Forms.Timer(this.components);
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
             this.OpacityControl = new System.Windows.Forms.Timer(this.components);
-            this.time = new MetroFramework.Controls.MetroLabel();
             this.CurrentTime = new System.Windows.Forms.Timer(this.components);
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroProgressBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroProgressBar3 = new MetroFramework.Controls.MetroProgressBar();
+            this.CPUMetroLabel = new MetroFramework.Controls.MetroLabel();
+            this.RAMMetroLabel = new MetroFramework.Controls.MetroLabel();
+            this.CPUPercent = new MetroFramework.Controls.MetroLabel();
+            this.RAMPercent = new MetroFramework.Controls.MetroLabel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
             this.TaskManager.SuspendLayout();
@@ -84,8 +96,10 @@
             this.metroPanel1.SuspendLayout();
             this.AppSettings.SuspendLayout();
             this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
+            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // QuickScan
@@ -166,9 +180,10 @@
             this.metroTabControl1.Controls.Add(this.CpuRamMonitor);
             this.metroTabControl1.Controls.Add(this.SystemInfo);
             this.metroTabControl1.Controls.Add(this.AppSettings);
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(14, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 5;
             this.metroTabControl1.Size = new System.Drawing.Size(1102, 565);
             this.metroTabControl1.TabIndex = 5;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -200,6 +215,19 @@
             this.Scanner.VerticalScrollbarBarColor = true;
             this.Scanner.VerticalScrollbarHighlightOnWheel = false;
             this.Scanner.VerticalScrollbarSize = 10;
+            // 
+            // time
+            // 
+            this.time.AutoSize = true;
+            this.time.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.time.Location = new System.Drawing.Point(993, 4);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(85, 19);
+            this.time.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.time.TabIndex = 9;
+            this.time.Text = "00:00:00:00";
+            this.time.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.time.UseStyleColors = true;
             // 
             // Opacity
             // 
@@ -695,19 +723,18 @@
             // 
             // CPURAM
             // 
-            this.CPURAM.Enabled = true;
             this.CPURAM.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // CPU
+            // pCPU
             // 
-            this.CPU.CategoryName = "Processor";
-            this.CPU.CounterName = "% Processor Time";
-            this.CPU.InstanceName = "_Total";
+            this.pCPU.CategoryName = "Processor";
+            this.pCPU.CounterName = "% Processor Time";
+            this.pCPU.InstanceName = "_Total";
             // 
-            // RAM
+            // pRAM
             // 
-            this.RAM.CategoryName = "Memory";
-            this.RAM.CounterName = "% Committed Bytes In Use";
+            this.pRAM.CategoryName = "Memory";
+            this.pRAM.CounterName = "% Committed Bytes In Use";
             // 
             // SysInfo
             // 
@@ -733,23 +760,133 @@
             this.OpacityControl.Interval = 500;
             this.OpacityControl.Tick += new System.EventHandler(this.OpacityControl_Tick);
             // 
-            // time
-            // 
-            this.time.AutoSize = true;
-            this.time.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.time.Location = new System.Drawing.Point(993, 4);
-            this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(85, 19);
-            this.time.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.time.TabIndex = 9;
-            this.time.Text = "00:00:00:00";
-            this.time.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.time.UseStyleColors = true;
-            // 
             // CurrentTime
             // 
             this.CurrentTime.Enabled = true;
             this.CurrentTime.Tick += new System.EventHandler(this.CurrentTime_Tick);
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.chart1);
+            this.metroTabPage1.Controls.Add(this.metroProgressBar3);
+            this.metroTabPage1.Controls.Add(this.RAMPercent);
+            this.metroTabPage1.Controls.Add(this.CPUPercent);
+            this.metroTabPage1.Controls.Add(this.RAMMetroLabel);
+            this.metroTabPage1.Controls.Add(this.CPUMetroLabel);
+            this.metroTabPage1.Controls.Add(this.metroProgressBar2);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(1094, 523);
+            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTabPage1.TabIndex = 5;
+            this.metroTabPage1.Text = "metroTabPage1";
+            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage1.UseStyleColors = true;
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // metroProgressBar2
+            // 
+            this.metroProgressBar2.Location = new System.Drawing.Point(148, 3);
+            this.metroProgressBar2.Name = "metroProgressBar2";
+            this.metroProgressBar2.Size = new System.Drawing.Size(784, 43);
+            this.metroProgressBar2.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroProgressBar2.TabIndex = 2;
+            this.metroProgressBar2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroProgressBar3
+            // 
+            this.metroProgressBar3.Location = new System.Drawing.Point(148, 52);
+            this.metroProgressBar3.Name = "metroProgressBar3";
+            this.metroProgressBar3.Size = new System.Drawing.Size(784, 45);
+            this.metroProgressBar3.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroProgressBar3.TabIndex = 3;
+            this.metroProgressBar3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // CPUMetroLabel
+            // 
+            this.CPUMetroLabel.AutoSize = true;
+            this.CPUMetroLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.CPUMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.CPUMetroLabel.Location = new System.Drawing.Point(88, 12);
+            this.CPUMetroLabel.Name = "CPUMetroLabel";
+            this.CPUMetroLabel.Size = new System.Drawing.Size(47, 25);
+            this.CPUMetroLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.CPUMetroLabel.TabIndex = 4;
+            this.CPUMetroLabel.Text = "CPU";
+            this.CPUMetroLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CPUMetroLabel.UseStyleColors = true;
+            // 
+            // RAMMetroLabel
+            // 
+            this.RAMMetroLabel.AutoSize = true;
+            this.RAMMetroLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.RAMMetroLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.RAMMetroLabel.Location = new System.Drawing.Point(88, 63);
+            this.RAMMetroLabel.Name = "RAMMetroLabel";
+            this.RAMMetroLabel.Size = new System.Drawing.Size(54, 25);
+            this.RAMMetroLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.RAMMetroLabel.TabIndex = 5;
+            this.RAMMetroLabel.Text = "RAM";
+            this.RAMMetroLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.RAMMetroLabel.UseStyleColors = true;
+            // 
+            // CPUPercent
+            // 
+            this.CPUPercent.AutoSize = true;
+            this.CPUPercent.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.CPUPercent.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.CPUPercent.Location = new System.Drawing.Point(938, 12);
+            this.CPUPercent.Name = "CPUPercent";
+            this.CPUPercent.Size = new System.Drawing.Size(38, 25);
+            this.CPUPercent.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.CPUPercent.TabIndex = 6;
+            this.CPUPercent.Text = "0%";
+            this.CPUPercent.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.CPUPercent.UseStyleColors = true;
+            // 
+            // RAMPercent
+            // 
+            this.RAMPercent.AutoSize = true;
+            this.RAMPercent.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.RAMPercent.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.RAMPercent.Location = new System.Drawing.Point(938, 63);
+            this.RAMPercent.Name = "RAMPercent";
+            this.RAMPercent.Size = new System.Drawing.Size(38, 25);
+            this.RAMPercent.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.RAMPercent.TabIndex = 7;
+            this.RAMPercent.Text = "0%";
+            this.RAMPercent.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.RAMPercent.UseStyleColors = true;
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 121);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "CPU";
+            series1.YValuesPerPoint = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "RAM";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(1098, 395);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
             // 
             // Anti_Virus
             // 
@@ -778,8 +915,11 @@
             this.AppSettings.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRAM)).EndInit();
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -796,8 +936,8 @@
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         private Fader_Theme.FaderAlertBox faderAlertBox1;
         private System.Windows.Forms.Timer CPURAM;
-        private System.Diagnostics.PerformanceCounter CPU;
-        private System.Diagnostics.PerformanceCounter RAM;
+        private System.Diagnostics.PerformanceCounter pCPU;
+        private System.Diagnostics.PerformanceCounter pRAM;
         private System.Windows.Forms.Timer SysInfo;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Timer ProgressBar;
@@ -832,5 +972,13 @@
         private MetroFramework.Controls.MetroLabel TopMostOnOff;
         private MetroFramework.Controls.MetroLabel time;
         private System.Windows.Forms.Timer CurrentTime;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private MetroFramework.Controls.MetroLabel RAMPercent;
+        private MetroFramework.Controls.MetroLabel CPUPercent;
+        private MetroFramework.Controls.MetroLabel RAMMetroLabel;
+        private MetroFramework.Controls.MetroLabel CPUMetroLabel;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar3;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar2;
     }
 }
