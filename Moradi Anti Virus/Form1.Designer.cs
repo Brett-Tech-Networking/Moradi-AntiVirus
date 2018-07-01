@@ -102,6 +102,7 @@
             this.ubuntuTheme1.Size = new System.Drawing.Size(736, 462);
             this.ubuntuTheme1.TabIndex = 0;
             this.ubuntuTheme1.Text = "Moradi Anti Virus | Brett Tech Networking";
+            this.ubuntuTheme1.Click += new System.EventHandler(this.ubuntuTheme1_Click);
             // 
             // faderTabControl1
             // 
@@ -402,6 +403,7 @@
             this.circularProgressBar2.TabIndex = 3;
             this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar2.Value = 68;
+            this.circularProgressBar2.Click += new System.EventHandler(this.circularProgressBar2_Click);
             // 
             // circularProgressBar1
             // 

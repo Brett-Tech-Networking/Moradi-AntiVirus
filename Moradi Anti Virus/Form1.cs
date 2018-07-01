@@ -238,6 +238,16 @@ namespace Moradi_Anti_Virus
         {
 
         }
+
+        private void circularProgressBar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ubuntuTheme1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
