@@ -75,7 +75,6 @@ C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debu
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\bin\Debug\WinFormAnimation.xml
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csprojAssemblyReference.cache
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Anti_Virus.resources
-C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Form1.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.frmRunTask.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.help.resources
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Properties.Resources.resources

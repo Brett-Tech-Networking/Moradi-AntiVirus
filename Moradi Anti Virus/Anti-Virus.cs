@@ -133,7 +133,7 @@ namespace Moradi_Anti_Virus
 
             catch
             {
-                MessageBox.Show("We Encounterd An Issue While Handling Your Request Please Try Again Or Contact The Software Developers In The About Section.", "Woa There", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               SSID.Text = ("Unavalible (Are You Hard Wired?)");
             }
         }
 
