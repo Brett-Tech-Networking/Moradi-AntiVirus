@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<item>
+    <version>0.2.0.0</version>
+    <url>https://github.com/Brett-Tech-Networking/Moradi-AntiVirus/releases/download/v0.1/Moradi-AntiVirus.zip</url>
+    <changelog>https://github.com/Brett-Tech-Networking/Moradi-AntiVirus/blob/master/ChangeLog.md</changelog>
+    <mandatory>false</mandatory>
+</item>
