@@ -83,3 +83,4 @@ C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debu
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.csproj.CopyComplete
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.exe
 C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi Anti Virus.pdb
+C:\Users\Brett Tech\Documents\GitHub\Moradi-AntiVirus\Moradi Anti Virus\obj\Debug\Moradi_Anti_Virus.Moradi_AntiVirus_Updater.resources

@@ -54,11 +54,6 @@
             this.KillTask = new MetroFramework.Controls.MetroButton();
             this.Status = new MetroFramework.Controls.MetroLabel();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.CpuRamMonitor = new MetroFramework.Controls.MetroTabPage();
-            this.RAMLABEL = new MetroFramework.Controls.MetroLabel();
-            this.cpuLabel = new MetroFramework.Controls.MetroLabel();
-            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
-            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.SystemInfo = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SSID = new MetroFramework.Controls.MetroLabel();
@@ -80,7 +75,7 @@
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
             this.OpacityControl = new System.Windows.Forms.Timer(this.components);
             this.CurrentTime = new System.Windows.Forms.Timer(this.components);
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.monitor = new MetroFramework.Controls.MetroTabPage();
             this.metroProgressBar2 = new MetroFramework.Controls.MetroProgressBar();
             this.metroProgressBar3 = new MetroFramework.Controls.MetroProgressBar();
             this.CPUMetroLabel = new MetroFramework.Controls.MetroLabel();
@@ -88,27 +83,27 @@
             this.CPUPercent = new MetroFramework.Controls.MetroLabel();
             this.RAMPercent = new MetroFramework.Controls.MetroLabel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button1 = new System.Windows.Forms.Button();
             this.metroTabControl1.SuspendLayout();
             this.Scanner.SuspendLayout();
             this.TaskManager.SuspendLayout();
-            this.CpuRamMonitor.SuspendLayout();
             this.SystemInfo.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.AppSettings.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
-            this.metroTabPage1.SuspendLayout();
+            this.monitor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // QuickScan
             // 
-            this.QuickScan.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.QuickScan.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.QuickScan.Location = new System.Drawing.Point(34, 27);
             this.QuickScan.Name = "QuickScan";
-            this.QuickScan.Size = new System.Drawing.Size(120, 37);
-            this.QuickScan.Style = MetroFramework.MetroColorStyle.Blue;
+            this.QuickScan.Size = new System.Drawing.Size(120, 30);
+            this.QuickScan.Style = MetroFramework.MetroColorStyle.Red;
             this.QuickScan.TabIndex = 0;
             this.QuickScan.Text = "Quick Scan";
             this.QuickScan.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -119,11 +114,11 @@
             // FullScan
             // 
             this.FullScan.DisplayFocus = true;
-            this.FullScan.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.FullScan.Location = new System.Drawing.Point(34, 80);
+            this.FullScan.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.FullScan.Location = new System.Drawing.Point(34, 63);
             this.FullScan.Name = "FullScan";
-            this.FullScan.Size = new System.Drawing.Size(120, 37);
-            this.FullScan.Style = MetroFramework.MetroColorStyle.Blue;
+            this.FullScan.Size = new System.Drawing.Size(120, 30);
+            this.FullScan.Style = MetroFramework.MetroColorStyle.Red;
             this.FullScan.TabIndex = 1;
             this.FullScan.Text = "Full Scan";
             this.FullScan.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -133,11 +128,11 @@
             // 
             // CustomScan
             // 
-            this.CustomScan.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.CustomScan.Location = new System.Drawing.Point(34, 135);
+            this.CustomScan.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.CustomScan.Location = new System.Drawing.Point(34, 99);
             this.CustomScan.Name = "CustomScan";
-            this.CustomScan.Size = new System.Drawing.Size(120, 37);
-            this.CustomScan.Style = MetroFramework.MetroColorStyle.Blue;
+            this.CustomScan.Size = new System.Drawing.Size(120, 30);
+            this.CustomScan.Style = MetroFramework.MetroColorStyle.Red;
             this.CustomScan.TabIndex = 2;
             this.CustomScan.Text = "Custom Scan";
             this.CustomScan.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -161,11 +156,11 @@
             // DelCache
             // 
             this.DelCache.AutoSize = true;
-            this.DelCache.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.DelCache.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.DelCache.Location = new System.Drawing.Point(34, 370);
             this.DelCache.Name = "DelCache";
             this.DelCache.Size = new System.Drawing.Size(120, 37);
-            this.DelCache.Style = MetroFramework.MetroColorStyle.Blue;
+            this.DelCache.Style = MetroFramework.MetroColorStyle.Red;
             this.DelCache.TabIndex = 4;
             this.DelCache.Text = "Delete Cache";
             this.DelCache.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -177,13 +172,12 @@
             // 
             this.metroTabControl1.Controls.Add(this.Scanner);
             this.metroTabControl1.Controls.Add(this.TaskManager);
-            this.metroTabControl1.Controls.Add(this.CpuRamMonitor);
+            this.metroTabControl1.Controls.Add(this.monitor);
             this.metroTabControl1.Controls.Add(this.SystemInfo);
             this.metroTabControl1.Controls.Add(this.AppSettings);
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(14, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 5;
+            this.metroTabControl1.SelectedIndex = 4;
             this.metroTabControl1.Size = new System.Drawing.Size(1102, 565);
             this.metroTabControl1.TabIndex = 5;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -417,123 +411,6 @@
             this.listBox2.Sorted = true;
             this.listBox2.TabIndex = 2;
             // 
-            // CpuRamMonitor
-            // 
-            this.CpuRamMonitor.BackColor = System.Drawing.Color.Transparent;
-            this.CpuRamMonitor.Controls.Add(this.RAMLABEL);
-            this.CpuRamMonitor.Controls.Add(this.cpuLabel);
-            this.CpuRamMonitor.Controls.Add(this.circularProgressBar2);
-            this.CpuRamMonitor.Controls.Add(this.circularProgressBar1);
-            this.CpuRamMonitor.HorizontalScrollbarBarColor = true;
-            this.CpuRamMonitor.HorizontalScrollbarHighlightOnWheel = false;
-            this.CpuRamMonitor.HorizontalScrollbarSize = 10;
-            this.CpuRamMonitor.Location = new System.Drawing.Point(4, 38);
-            this.CpuRamMonitor.Name = "CpuRamMonitor";
-            this.CpuRamMonitor.Size = new System.Drawing.Size(1094, 523);
-            this.CpuRamMonitor.Style = MetroFramework.MetroColorStyle.Blue;
-            this.CpuRamMonitor.TabIndex = 2;
-            this.CpuRamMonitor.Text = "CPU && RAM Monitor";
-            this.CpuRamMonitor.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.CpuRamMonitor.UseStyleColors = true;
-            this.CpuRamMonitor.VerticalScrollbarBarColor = true;
-            this.CpuRamMonitor.VerticalScrollbarHighlightOnWheel = false;
-            this.CpuRamMonitor.VerticalScrollbarSize = 10;
-            // 
-            // RAMLABEL
-            // 
-            this.RAMLABEL.AutoSize = true;
-            this.RAMLABEL.BackColor = System.Drawing.Color.Transparent;
-            this.RAMLABEL.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.RAMLABEL.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.RAMLABEL.Location = new System.Drawing.Point(736, 360);
-            this.RAMLABEL.Name = "RAMLABEL";
-            this.RAMLABEL.Size = new System.Drawing.Size(54, 25);
-            this.RAMLABEL.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.RAMLABEL.TabIndex = 5;
-            this.RAMLABEL.Text = "RAM";
-            this.RAMLABEL.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.RAMLABEL.UseStyleColors = true;
-            // 
-            // cpuLabel
-            // 
-            this.cpuLabel.AutoSize = true;
-            this.cpuLabel.BackColor = System.Drawing.Color.Transparent;
-            this.cpuLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.cpuLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.cpuLabel.Location = new System.Drawing.Point(299, 360);
-            this.cpuLabel.Name = "cpuLabel";
-            this.cpuLabel.Size = new System.Drawing.Size(47, 25);
-            this.cpuLabel.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.cpuLabel.TabIndex = 4;
-            this.cpuLabel.Text = "CPU";
-            this.cpuLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.cpuLabel.UseStyleColors = true;
-            // 
-            // circularProgressBar2
-            // 
-            this.circularProgressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar2.AnimationSpeed = 500;
-            this.circularProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar2.ForeColor = System.Drawing.Color.Lime;
-            this.circularProgressBar2.InnerColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar2.InnerMargin = 2;
-            this.circularProgressBar2.InnerWidth = -1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(599, 25);
-            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar2.Name = "circularProgressBar2";
-            this.circularProgressBar2.OuterColor = System.Drawing.Color.Gray;
-            this.circularProgressBar2.OuterMargin = -25;
-            this.circularProgressBar2.OuterWidth = 26;
-            this.circularProgressBar2.ProgressColor = System.Drawing.Color.Red;
-            this.circularProgressBar2.ProgressWidth = 25;
-            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar2.Size = new System.Drawing.Size(320, 320);
-            this.circularProgressBar2.StartAngle = 270;
-            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar2.SubscriptText = "";
-            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar2.SuperscriptText = "";
-            this.circularProgressBar2.TabIndex = 3;
-            this.circularProgressBar2.Text = " ";
-            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar2.Value = 68;
-            // 
-            // circularProgressBar1
-            // 
-            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.circularProgressBar1.AnimationSpeed = 500;
-            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.Lime;
-            this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.InnerMargin = 2;
-            this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(169, 25);
-            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
-            this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
-            this.circularProgressBar1.OuterMargin = -25;
-            this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.Red;
-            this.circularProgressBar1.ProgressWidth = 25;
-            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(320, 320);
-            this.circularProgressBar1.StartAngle = 270;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.circularProgressBar1.SuperscriptText = "";
-            this.circularProgressBar1.TabIndex = 2;
-            this.circularProgressBar1.Text = " ";
-            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.circularProgressBar1.Value = 68;
-            // 
             // SystemInfo
             // 
             this.SystemInfo.Controls.Add(this.metroPanel1);
@@ -640,6 +517,7 @@
             // 
             // AppSettings
             // 
+            this.AppSettings.Controls.Add(this.button1);
             this.AppSettings.Controls.Add(this.metroPanel2);
             this.AppSettings.HorizontalScrollbarBarColor = true;
             this.AppSettings.HorizontalScrollbarHighlightOnWheel = false;
@@ -765,29 +643,29 @@
             this.CurrentTime.Enabled = true;
             this.CurrentTime.Tick += new System.EventHandler(this.CurrentTime_Tick);
             // 
-            // metroTabPage1
+            // monitor
             // 
-            this.metroTabPage1.Controls.Add(this.chart1);
-            this.metroTabPage1.Controls.Add(this.metroProgressBar3);
-            this.metroTabPage1.Controls.Add(this.RAMPercent);
-            this.metroTabPage1.Controls.Add(this.CPUPercent);
-            this.metroTabPage1.Controls.Add(this.RAMMetroLabel);
-            this.metroTabPage1.Controls.Add(this.CPUMetroLabel);
-            this.metroTabPage1.Controls.Add(this.metroProgressBar2);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1094, 523);
-            this.metroTabPage1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTabPage1.TabIndex = 5;
-            this.metroTabPage1.Text = "metroTabPage1";
-            this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage1.UseStyleColors = true;
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.monitor.Controls.Add(this.chart1);
+            this.monitor.Controls.Add(this.metroProgressBar3);
+            this.monitor.Controls.Add(this.RAMPercent);
+            this.monitor.Controls.Add(this.CPUPercent);
+            this.monitor.Controls.Add(this.RAMMetroLabel);
+            this.monitor.Controls.Add(this.CPUMetroLabel);
+            this.monitor.Controls.Add(this.metroProgressBar2);
+            this.monitor.HorizontalScrollbarBarColor = true;
+            this.monitor.HorizontalScrollbarHighlightOnWheel = false;
+            this.monitor.HorizontalScrollbarSize = 10;
+            this.monitor.Location = new System.Drawing.Point(4, 38);
+            this.monitor.Name = "monitor";
+            this.monitor.Size = new System.Drawing.Size(1094, 523);
+            this.monitor.Style = MetroFramework.MetroColorStyle.Blue;
+            this.monitor.TabIndex = 5;
+            this.monitor.Text = "CPU/RAM Monitor";
+            this.monitor.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.monitor.UseStyleColors = true;
+            this.monitor.VerticalScrollbarBarColor = true;
+            this.monitor.VerticalScrollbarHighlightOnWheel = false;
+            this.monitor.VerticalScrollbarSize = 10;
             // 
             // metroProgressBar2
             // 
@@ -888,6 +766,16 @@
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Anti_Virus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -898,7 +786,6 @@
             this.MaximizeBox = false;
             this.Name = "Anti_Virus";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Moradi Anti Virus Protection";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Anti_Virus_Load);
@@ -907,8 +794,6 @@
             this.Scanner.PerformLayout();
             this.TaskManager.ResumeLayout(false);
             this.TaskManager.PerformLayout();
-            this.CpuRamMonitor.ResumeLayout(false);
-            this.CpuRamMonitor.PerformLayout();
             this.SystemInfo.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
@@ -917,8 +802,8 @@
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).EndInit();
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
+            this.monitor.ResumeLayout(false);
+            this.monitor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
@@ -947,11 +832,6 @@
         private MetroFramework.Controls.MetroLabel Status;
         private MetroFramework.Controls.MetroButton KillTask;
         private MetroFramework.Controls.MetroButton NewTask;
-        private MetroFramework.Controls.MetroTabPage CpuRamMonitor;
-        private CircularProgressBar.CircularProgressBar circularProgressBar2;
-        private CircularProgressBar.CircularProgressBar circularProgressBar1;
-        private MetroFramework.Controls.MetroLabel RAMLABEL;
-        private MetroFramework.Controls.MetroLabel cpuLabel;
         private MetroFramework.Controls.MetroButton refresh;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroButton Search;
@@ -972,7 +852,7 @@
         private MetroFramework.Controls.MetroLabel TopMostOnOff;
         private MetroFramework.Controls.MetroLabel time;
         private System.Windows.Forms.Timer CurrentTime;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage monitor;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private MetroFramework.Controls.MetroLabel RAMPercent;
         private MetroFramework.Controls.MetroLabel CPUPercent;
@@ -980,5 +860,6 @@
         private MetroFramework.Controls.MetroLabel CPUMetroLabel;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar3;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar2;
+        private System.Windows.Forms.Button button1;
     }
 }

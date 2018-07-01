@@ -233,5 +233,17 @@ namespace Moradi_Anti_Virus
             time.Text = DateTime.Now.ToString("hh:mm:ss tt");
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Moradi_AntiVirus_Updater update = new Moradi_AntiVirus_Updater();
+            update.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Moradi_AntiVirus_Updater updater = new Moradi_AntiVirus_Updater();
+            updater.Show();
+        }
     }
     }
