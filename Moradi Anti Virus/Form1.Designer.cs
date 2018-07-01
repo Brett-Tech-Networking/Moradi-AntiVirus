@@ -55,7 +55,6 @@
             this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.AdvancedTools = new System.Windows.Forms.TabPage();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.About = new System.Windows.Forms.TabPage();
             this.faderPanel3 = new Fader_Theme.FaderPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -84,7 +83,6 @@
             this.Scanner.SuspendLayout();
             this.cpuram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.AdvancedTools.SuspendLayout();
             this.About.SuspendLayout();
             this.faderPanel3.SuspendLayout();
             this.faderPanel2.SuspendLayout();
@@ -439,26 +437,11 @@
             // AdvancedTools
             // 
             this.AdvancedTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.AdvancedTools.Controls.Add(this.metroButton1);
             this.AdvancedTools.Location = new System.Drawing.Point(4, 39);
             this.AdvancedTools.Name = "AdvancedTools";
             this.AdvancedTools.Size = new System.Drawing.Size(727, 393);
             this.AdvancedTools.TabIndex = 3;
             this.AdvancedTools.Text = "Advanced Tools";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Highlight = true;
-            this.metroButton1.Location = new System.Drawing.Point(7, 6);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(105, 53);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "Calculator";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // About
             // 
@@ -699,7 +682,6 @@
             this.cpuram.ResumeLayout(false);
             this.cpuram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.AdvancedTools.ResumeLayout(false);
             this.About.ResumeLayout(false);
             this.faderPanel3.ResumeLayout(false);
             this.faderPanel3.PerformLayout();
@@ -761,7 +743,6 @@
         private Ubuntu_Theme.UbuntuTextBox ubuntuTextBox1;
         private System.Windows.Forms.TabPage AdvancedTools;
         private System.Windows.Forms.Label label6;
-        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 
