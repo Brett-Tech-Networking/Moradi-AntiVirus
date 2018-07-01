@@ -192,7 +192,7 @@ namespace Moradi_Anti_Virus
                 proc[faderListBox1.SelectedIndex].Kill();
                 GetAllProcess();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Could Not Stop Task","ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -237,19 +237,6 @@ namespace Moradi_Anti_Virus
         private void faderButton1_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Caculator c = new Caculator();
-                c.Show();
-            }
-            catch
-            {
-                MessageBox.Show("There was an issue opining The Calculator","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
         }
     }
 }
