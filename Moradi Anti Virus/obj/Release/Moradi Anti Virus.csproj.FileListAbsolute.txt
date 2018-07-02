@@ -1,6 +1,4 @@
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\Moradi Anti Virus.exe.config
-C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.Caculator.resources
-C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.Form1.resources
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.frmRunTask.resources
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.help.resources
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.Properties.Resources.resources
@@ -21,3 +19,8 @@ C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\Circula
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\WinFormAnimation.xml
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi Anti Virus.exe
 C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi Anti Virus.pdb
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\AutoUpdater.NET.dll
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\AutoUpdater.NET.pdb
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\bin\Release\AutoUpdater.NET.xml
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.Anti_Virus.resources
+C:\Users\Mat\Source\Repos\Moradi-AntiVirus\Moradi Anti Virus\obj\Release\Moradi_Anti_Virus.UpdatePrompt.resources

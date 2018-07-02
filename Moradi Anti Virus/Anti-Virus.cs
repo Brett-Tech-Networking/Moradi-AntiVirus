@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Linq;
+using AutoUpdaterDotNET;
 
 namespace Moradi_Anti_Virus
 {
@@ -25,7 +25,27 @@ namespace Moradi_Anti_Virus
 
         private void Anti_Virus_Load(object sender, EventArgs e)
         {
+            AutoUpdater.Start("https://raw.githubusercontent.com/Brett-Tech-Networking/Moradi-AntiVirus/master/VersionManager.xml");
+
+            AutoUpdater.ReportErrors = true;
+
+            AutoUpdater.Mandatory = true;
+
+            AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
+
             CPURAM.Start();
+        }
+
+        private void AutoUpdaterOnCheckForUpdateEvent(UpdateInfoEventArgs args)
+        {
+            if (args != null)
+            {
+                if (args.IsUpdateAvailable)
+                {
+                    UpdatePrompt updater = new UpdatePrompt();
+                    updater.Show();
+                }
+            }
         }
 
         private void QuickScan_Click(object sender, EventArgs e)
@@ -236,13 +256,13 @@ namespace Moradi_Anti_Virus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Moradi_AntiVirus_Updater update = new Moradi_AntiVirus_Updater();
+            UpdatePrompt update = new UpdatePrompt();
             update.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Moradi_AntiVirus_Updater updater = new Moradi_AntiVirus_Updater();
+            UpdatePrompt updater = new UpdatePrompt();
             updater.Show();
         }
     }
