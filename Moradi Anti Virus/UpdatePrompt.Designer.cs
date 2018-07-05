@@ -132,8 +132,10 @@
             this.Controls.Add(this.metroLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdatePrompt";
             this.Resizable = false;
+            this.ShowInTaskbar = false;
             this.Text = "Moradi AntiVirus | New Update Available !";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Moradi_AntiVirus_Updater_Load);
