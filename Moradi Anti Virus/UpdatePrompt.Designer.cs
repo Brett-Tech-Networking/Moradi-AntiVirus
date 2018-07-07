@@ -45,7 +45,7 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(4, 60);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(554, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(552, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Version 0.2.0.0 is now available. Would you like to download it now?";
@@ -59,7 +59,7 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.Location = new System.Drawing.Point(4, 464);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(201, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(199, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Your Current Version: 0.1.0.0";
@@ -111,7 +111,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.Martz90_Circle_Addon2_Downloads;
+            this.pictureBox1.Image = global::Moradi_Anti_Virus.Properties.Resources.Download;
             this.pictureBox1.Location = new System.Drawing.Point(459, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 35);
@@ -138,6 +138,7 @@
             this.ShowInTaskbar = false;
             this.Text = "Moradi AntiVirus | New Update Available !";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Moradi_AntiVirus_Updater_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

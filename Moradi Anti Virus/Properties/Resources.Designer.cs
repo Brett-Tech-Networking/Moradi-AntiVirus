@@ -63,9 +63,9 @@ namespace Moradi_Anti_Virus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Martz90_Circle_Addon2_Downloads {
+        internal static System.Drawing.Bitmap Download {
             get {
-                object obj = ResourceManager.GetObject("Martz90-Circle-Addon2-Downloads", resourceCulture);
+                object obj = ResourceManager.GetObject("Download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace Moradi_Anti_Virus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap moradi_antivirus_tranceparent {
+        internal static System.Drawing.Bitmap Moradi_AntiVirus_Opacity {
             get {
-                object obj = ResourceManager.GetObject("moradi antivirus tranceparent", resourceCulture);
+                object obj = ResourceManager.GetObject("Moradi AntiVirus Opacity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoradiLogo {
+            get {
+                object obj = ResourceManager.GetObject("MoradiLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

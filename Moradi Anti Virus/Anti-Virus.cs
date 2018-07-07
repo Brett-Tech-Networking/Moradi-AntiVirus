@@ -34,6 +34,14 @@ namespace Moradi_Anti_Virus
             AutoUpdater.CheckForUpdateEvent += AutoUpdaterOnCheckForUpdateEvent;
 
             CPURAM.Start();
+
+            //Welcome Back
+            WelcomeBack.Text = "Current User: " +  System.Environment.UserName.ToString();
+
+            //version 
+            Version.Text = "Version: " + ProductVersion.ToString();
+
+           
         }
 
         private void AutoUpdaterOnCheckForUpdateEvent(UpdateInfoEventArgs args)
@@ -48,45 +56,7 @@ namespace Moradi_Anti_Virus
             }
         }
 
-        private void QuickScan_Click(object sender, EventArgs e)
-        {
-            // Quick scanner
-            faderAlertBox1.Visible = true;
-            faderAlertBox1.Text = "The Selected Item Is Not Yet Avalible Please Try Again Later";
-        }
-
-        private void FullScan_Click(object sender, EventArgs e)
-        {
-            // Full Scanner
-            faderAlertBox1.Visible = true;
-            faderAlertBox1.Text = "The Selected Item Is Not Yet Avalible Please Try Again Later";
-        }
-
-        private void CustomScan_Click(object sender, EventArgs e)
-        {
-            // Custom Scanner
-
-            faderAlertBox1.Visible = true;
-            faderAlertBox1.Text = "The Selected Item Is Not Yet Avalible Please Try Again Later";
-        }
-
-        private void DelCache_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ProgressBar.Start();
-
-                String tempFolder = Environment.ExpandEnvironmentVariables("%TEMP%");
-                String prefetch = Environment.ExpandEnvironmentVariables("%SYSTEMROOT%") + "\\Prefetch";
-                EmptyFolderContents(tempFolder);
-                EmptyFolderContents(prefetch);
-            }
-            catch
-            {
-                faderAlertBox1.Text = "ERROR PROCESSING REQUEST";
-                MessageBox.Show("We Cannot Handle Your Request At This Time.", "Woa What Happened?",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-        }
+       
 
         private void EmptyFolderContents(string tempFolder)
         {
@@ -162,16 +132,7 @@ namespace Moradi_Anti_Virus
 
         private void ProgressBar_Tick(object sender, EventArgs e)
         {
-            metroProgressBar1.Value += 10;
-
-            if (metroProgressBar1.Value == metroProgressBar1.Maximum)
-            {
-                metroProgressBar1.BackColor = Color.Red;
-                faderAlertBox1.Visible = true;
-                faderAlertBox1.Text = "All Temp Files Slowing Down Your Computer Have Been Deleted";
-
-
-            }
+           
         }
 
         private void TaskmgrTimer_Tick(object sender, EventArgs e)
@@ -264,6 +225,26 @@ namespace Moradi_Anti_Virus
         {
             UpdatePrompt updater = new UpdatePrompt();
             updater.Show();
+        }
+
+        private void version_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Overview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
     }
