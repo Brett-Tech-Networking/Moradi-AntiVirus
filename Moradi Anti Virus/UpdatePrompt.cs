@@ -18,6 +18,7 @@ namespace Moradi_Anti_Virus
 
         private void Moradi_AntiVirus_Updater_Load(object sender, EventArgs e)
         {
+            Version.Text = "Current Version: " + ProductVersion.ToString();
         }
 
         private void metroLabel3_Click(object sender, EventArgs e)

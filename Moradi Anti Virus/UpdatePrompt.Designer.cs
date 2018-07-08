@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatePrompt));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.Version = new MetroFramework.Controls.MetroLabel();
             this.UpdateButton = new MetroFramework.Controls.MetroButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -45,7 +45,7 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(4, 60);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(552, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(554, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Version 0.2.0.0 is now available. Would you like to download it now?";
@@ -53,18 +53,18 @@
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel1.UseStyleColors = true;
             // 
-            // metroLabel2
+            // Version
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(4, 464);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(199, 19);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Your Current Version: 0.1.0.0";
-            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroLabel2.UseStyleColors = true;
+            this.Version.AutoSize = true;
+            this.Version.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Version.Location = new System.Drawing.Point(4, 464);
+            this.Version.Name = "Version";
+            this.Version.Size = new System.Drawing.Size(121, 19);
+            this.Version.Style = MetroFramework.MetroColorStyle.Red;
+            this.Version.TabIndex = 1;
+            this.Version.Text = "Current Version: ";
+            this.Version.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Version.UseStyleColors = true;
             // 
             // UpdateButton
             // 
@@ -128,7 +128,7 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.Version);
             this.Controls.Add(this.metroLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -149,7 +149,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel Version;
         private MetroFramework.Controls.MetroButton UpdateButton;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
