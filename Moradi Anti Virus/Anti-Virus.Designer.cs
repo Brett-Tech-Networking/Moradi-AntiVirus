@@ -210,12 +210,12 @@
             // metroButton1
             // 
             this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Location = new System.Drawing.Point(128, 342);
+            this.metroButton1.Location = new System.Drawing.Point(123, 357);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(112, 46);
+            this.metroButton1.Size = new System.Drawing.Size(136, 46);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Erase Viruses";
+            this.metroButton1.Text = "Expunge Viruses";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.UseStyleColors = true;
@@ -227,7 +227,7 @@
             this.WelcomeBack.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.WelcomeBack.Location = new System.Drawing.Point(3, 483);
             this.WelcomeBack.Name = "WelcomeBack";
-            this.WelcomeBack.Size = new System.Drawing.Size(48, 19);
+            this.WelcomeBack.Size = new System.Drawing.Size(47, 19);
             this.WelcomeBack.Style = MetroFramework.MetroColorStyle.Orange;
             this.WelcomeBack.TabIndex = 13;
             this.WelcomeBack.Text = "User: ";
@@ -253,7 +253,7 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(99, 17);
+            this.metroLabel3.Location = new System.Drawing.Point(123, 19);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(131, 25);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
@@ -269,7 +269,7 @@
             this.Version.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.Version.Location = new System.Drawing.Point(3, 461);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(66, 19);
+            this.Version.Size = new System.Drawing.Size(67, 19);
             this.Version.Style = MetroFramework.MetroColorStyle.Orange;
             this.Version.TabIndex = 12;
             this.Version.Text = "Version: ";
@@ -718,7 +718,7 @@
             this.Status.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.Status.Location = new System.Drawing.Point(950, 3);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(59, 19);
+            this.Status.Size = new System.Drawing.Size(61, 19);
             this.Status.Style = MetroFramework.MetroColorStyle.Red;
             this.Status.TabIndex = 3;
             this.Status.Text = "STATUS";
@@ -1011,7 +1011,7 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.Location = new System.Drawing.Point(21, 23);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(105, 15);
+            this.metroLabel1.Size = new System.Drawing.Size(106, 15);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Top Most Disabled";
@@ -1041,7 +1041,7 @@
             this.TopMostOnOff.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.TopMostOnOff.Location = new System.Drawing.Point(3, 0);
             this.TopMostOnOff.Name = "TopMostOnOff";
-            this.TopMostOnOff.Size = new System.Drawing.Size(71, 19);
+            this.TopMostOnOff.Size = new System.Drawing.Size(72, 19);
             this.TopMostOnOff.Style = MetroFramework.MetroColorStyle.Red;
             this.TopMostOnOff.TabIndex = 2;
             this.TopMostOnOff.Text = "Top Most";
