@@ -1,2 +1,13 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 
-.vs/Moradi Anti Virus/v15/Server/sqlite3/db.lock
+# Visual Studio 2015 cache/options directory
+.vs/*
+
+!"packages/Fader Theme.dll"
+!"packages/Ubuntu Theme.dll"
+
+# The packages folder can be ignored because of Package Restore
+**/packages/*
