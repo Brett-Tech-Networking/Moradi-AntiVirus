@@ -102,6 +102,7 @@
             this.TaskmgrTimer = new System.Windows.Forms.Timer(this.components);
             this.OpacityControl = new System.Windows.Forms.Timer(this.components);
             this.CurrentTime = new System.Windows.Forms.Timer(this.components);
+            this.processorMdl = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.Overview.SuspendLayout();
             this.metroPanel5.SuspendLayout();
@@ -131,7 +132,7 @@
             this.metroTabControl1.Controls.Add(this.AppSettings);
             this.metroTabControl1.Location = new System.Drawing.Point(14, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(1102, 586);
             this.metroTabControl1.TabIndex = 5;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -881,6 +882,7 @@
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.metroPanel1.Controls.Add(this.processorMdl);
             this.metroPanel1.Controls.Add(this.SSID);
             this.metroPanel1.Controls.Add(this.mchName);
             this.metroPanel1.Controls.Add(this.OS);
@@ -904,7 +906,7 @@
             // 
             this.SSID.AutoSize = true;
             this.SSID.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.SSID.Location = new System.Drawing.Point(23, 145);
+            this.SSID.Location = new System.Drawing.Point(23, 169);
             this.SSID.Name = "SSID";
             this.SSID.Size = new System.Drawing.Size(43, 19);
             this.SSID.Style = MetroFramework.MetroColorStyle.Red;
@@ -1092,6 +1094,19 @@
             this.CurrentTime.Enabled = true;
             this.CurrentTime.Tick += new System.EventHandler(this.CurrentTime_Tick);
             // 
+            // processorMdl
+            // 
+            this.processorMdl.AutoSize = true;
+            this.processorMdl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.processorMdl.Location = new System.Drawing.Point(23, 141);
+            this.processorMdl.Name = "processorMdl";
+            this.processorMdl.Size = new System.Drawing.Size(126, 19);
+            this.processorMdl.Style = MetroFramework.MetroColorStyle.Red;
+            this.processorMdl.TabIndex = 7;
+            this.processorMdl.Text = "Processor Model:";
+            this.processorMdl.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.processorMdl.UseStyleColors = true;
+            // 
             // Anti_Virus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1206,5 +1221,6 @@
         private MetroFramework.Controls.MetroLabel time;
       new  private MetroFramework.Controls.MetroLabel Opacity;
         private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
+        private MetroFramework.Controls.MetroLabel processorMdl;
     }
 }

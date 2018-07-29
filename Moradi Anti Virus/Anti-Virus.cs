@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Linq;
 using AutoUpdaterDotNET;
+using Microsoft.Win32;
 
 namespace Moradi_Anti_Virus
 {
@@ -80,7 +81,6 @@ namespace Moradi_Anti_Virus
 
             try
             {
-
                 // username
                 usrname.Visible = true;
                 usrname.Text = "Username: " + Environment.UserName;
@@ -92,6 +92,10 @@ namespace Moradi_Anti_Virus
                 // Machine Name
                 mchName.Visible = true;
                 mchName.Text = "PC Name: " + Environment.MachineName;
+
+                //Processor Model
+                RegistryKey processor_name = Registry.LocalMachine.OpenSubKey(@"Hardware\Description\System\CentralProcessor\0", RegistryKeyPermissionCheck.ReadSubTree);   //This registry entry contains entry for processor info. 
+                processorMdl.Text = "Processor Model: " + (string)processor_name.GetValue("ProcessorNameString");
 
                 // WIFI 
                 var process = new Process
