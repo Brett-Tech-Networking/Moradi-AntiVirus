@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using AutoUpdaterDotNET;
 using Microsoft.Win32;
+using System.Management;
 
 namespace Moradi_Anti_Virus
 {
@@ -57,8 +58,6 @@ namespace Moradi_Anti_Virus
             }
         }
 
-       
-
         private void EmptyFolderContents(string tempFolder)
         {
             throw new NotImplementedException();
@@ -85,10 +84,6 @@ namespace Moradi_Anti_Virus
                 usrname.Visible = true;
                 usrname.Text = "Username: " + Environment.UserName;
 
-                // Operating System
-                OS.Visible = true;
-                OS.Text = "OS: " + Environment.OSVersion;
-
                 // Machine Name
                 mchName.Visible = true;
                 mchName.Text = "PC Name: " + Environment.MachineName;
@@ -97,8 +92,21 @@ namespace Moradi_Anti_Virus
                 RegistryKey processor_name = Registry.LocalMachine.OpenSubKey(@"Hardware\Description\System\CentralProcessor\0", RegistryKeyPermissionCheck.ReadSubTree);   //This registry entry contains entry for processor info. 
                 processorMdl.Text = "Processor Model: " + (string)processor_name.GetValue("ProcessorNameString");
 
-                // WIFI 
-                var process = new Process
+                //OS Information
+                ManagementObjectSearcher mos = new ManagementObjectSearcher("select * from Win32_OperatingSystem");
+                foreach (ManagementObject managementObject in mos.Get())
+                {
+                    if (managementObject["Caption"] != null)
+                    {
+                        osVersion.Text = "Operating System:  " + managementObject["Caption"].ToString();
+                    }
+                    if (managementObject["OSArchitecture"] != null)
+                    {
+                        osArchitecture.Text = "Operating System Architecture:  " + managementObject["OSArchitecture"].ToString();
+                    }
+                }
+                    // WIFI 
+                    var process = new Process
                 {
                     StartInfo =
                           {
@@ -121,7 +129,6 @@ namespace Moradi_Anti_Virus
                 var ssid = line.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries)[1].TrimStart();
                 SSID.Text = "Current WIFI SSID: " + (ssid);
             }
-
 
             catch
             {

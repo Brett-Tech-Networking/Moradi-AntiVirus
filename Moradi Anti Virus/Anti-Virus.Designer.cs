@@ -85,7 +85,6 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SSID = new MetroFramework.Controls.MetroLabel();
             this.mchName = new MetroFramework.Controls.MetroLabel();
-            this.OS = new MetroFramework.Controls.MetroLabel();
             this.usrname = new MetroFramework.Controls.MetroLabel();
             this.SysInfoLabel = new MetroFramework.Controls.MetroLabel();
             this.AppSettings = new MetroFramework.Controls.MetroTabPage();
@@ -103,6 +102,8 @@
             this.OpacityControl = new System.Windows.Forms.Timer(this.components);
             this.CurrentTime = new System.Windows.Forms.Timer(this.components);
             this.processorMdl = new MetroFramework.Controls.MetroLabel();
+            this.osVersion = new MetroFramework.Controls.MetroLabel();
+            this.osArchitecture = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.Overview.SuspendLayout();
             this.metroPanel5.SuspendLayout();
@@ -882,10 +883,11 @@
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.metroPanel1.Controls.Add(this.osArchitecture);
+            this.metroPanel1.Controls.Add(this.osVersion);
             this.metroPanel1.Controls.Add(this.processorMdl);
             this.metroPanel1.Controls.Add(this.SSID);
             this.metroPanel1.Controls.Add(this.mchName);
-            this.metroPanel1.Controls.Add(this.OS);
             this.metroPanel1.Controls.Add(this.usrname);
             this.metroPanel1.Controls.Add(this.SysInfoLabel);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -906,7 +908,7 @@
             // 
             this.SSID.AutoSize = true;
             this.SSID.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.SSID.Location = new System.Drawing.Point(23, 169);
+            this.SSID.Location = new System.Drawing.Point(23, 194);
             this.SSID.Name = "SSID";
             this.SSID.Size = new System.Drawing.Size(43, 19);
             this.SSID.Style = MetroFramework.MetroColorStyle.Red;
@@ -919,7 +921,7 @@
             // 
             this.mchName.AutoSize = true;
             this.mchName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.mchName.Location = new System.Drawing.Point(23, 112);
+            this.mchName.Location = new System.Drawing.Point(23, 81);
             this.mchName.Name = "mchName";
             this.mchName.Size = new System.Drawing.Size(113, 19);
             this.mchName.Style = MetroFramework.MetroColorStyle.Red;
@@ -927,19 +929,6 @@
             this.mchName.Text = "Machine Name:";
             this.mchName.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.mchName.UseStyleColors = true;
-            // 
-            // OS
-            // 
-            this.OS.AutoSize = true;
-            this.OS.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.OS.Location = new System.Drawing.Point(23, 82);
-            this.OS.Name = "OS";
-            this.OS.Size = new System.Drawing.Size(137, 19);
-            this.OS.Style = MetroFramework.MetroColorStyle.Red;
-            this.OS.TabIndex = 4;
-            this.OS.Text = "Operating System: ";
-            this.OS.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.OS.UseStyleColors = true;
             // 
             // usrname
             // 
@@ -1098,7 +1087,7 @@
             // 
             this.processorMdl.AutoSize = true;
             this.processorMdl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.processorMdl.Location = new System.Drawing.Point(23, 141);
+            this.processorMdl.Location = new System.Drawing.Point(23, 110);
             this.processorMdl.Name = "processorMdl";
             this.processorMdl.Size = new System.Drawing.Size(126, 19);
             this.processorMdl.Style = MetroFramework.MetroColorStyle.Red;
@@ -1106,6 +1095,32 @@
             this.processorMdl.Text = "Processor Model:";
             this.processorMdl.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.processorMdl.UseStyleColors = true;
+            // 
+            // osVersion
+            // 
+            this.osVersion.AutoSize = true;
+            this.osVersion.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.osVersion.Location = new System.Drawing.Point(23, 138);
+            this.osVersion.Name = "osVersion";
+            this.osVersion.Size = new System.Drawing.Size(133, 19);
+            this.osVersion.Style = MetroFramework.MetroColorStyle.Red;
+            this.osVersion.TabIndex = 8;
+            this.osVersion.Text = "Operating System:";
+            this.osVersion.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.osVersion.UseStyleColors = true;
+            // 
+            // osArchitecture
+            // 
+            this.osArchitecture.AutoSize = true;
+            this.osArchitecture.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.osArchitecture.Location = new System.Drawing.Point(23, 166);
+            this.osArchitecture.Name = "osArchitecture";
+            this.osArchitecture.Size = new System.Drawing.Size(219, 19);
+            this.osArchitecture.Style = MetroFramework.MetroColorStyle.Red;
+            this.osArchitecture.TabIndex = 9;
+            this.osArchitecture.Text = "Operating System Architecture:";
+            this.osArchitecture.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.osArchitecture.UseStyleColors = true;
             // 
             // Anti_Virus
             // 
@@ -1173,7 +1188,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel SSID;
         private MetroFramework.Controls.MetroLabel mchName;
-        private MetroFramework.Controls.MetroLabel OS;
         private MetroFramework.Controls.MetroLabel usrname;
         private MetroFramework.Controls.MetroLabel SysInfoLabel;
         private MetroFramework.Controls.MetroTabPage AppSettings;
@@ -1222,5 +1236,7 @@
       new  private MetroFramework.Controls.MetroLabel Opacity;
         private MetroFramework.Controls.MetroTrackBar metroTrackBar1;
         private MetroFramework.Controls.MetroLabel processorMdl;
+        private MetroFramework.Controls.MetroLabel osVersion;
+        private MetroFramework.Controls.MetroLabel osArchitecture;
     }
 }
