@@ -107,7 +107,6 @@
             this.metroLabel3.Text = "Release Notes:";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel3.UseStyleColors = true;
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
             // 
             // pictureBox1
             // 

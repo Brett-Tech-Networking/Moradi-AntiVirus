@@ -42,8 +42,6 @@ namespace Moradi_Anti_Virus
 
             //version 
             Version.Text = "Version: " + ProductVersion.ToString();
-
-           
         }
 
         private void AutoUpdaterOnCheckForUpdateEvent(UpdateInfoEventArgs args)
@@ -136,16 +134,6 @@ namespace Moradi_Anti_Virus
             }
         }
 
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProgressBar_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
         private void TaskmgrTimer_Tick(object sender, EventArgs e)
         {
             GetAllProcess();
@@ -172,11 +160,6 @@ namespace Moradi_Anti_Virus
                 if (frm.ShowDialog() == DialogResult.OK)
                     GetAllProcess();
             }
-        }
-
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void metroButton1_Click_1(object sender, EventArgs e)
@@ -237,25 +220,5 @@ namespace Moradi_Anti_Virus
             UpdatePrompt updater = new UpdatePrompt();
             updater.Show();
         }
-
-        private void version_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Overview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
-    }
+}

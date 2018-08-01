@@ -21,10 +21,6 @@ namespace Moradi_Anti_Virus
             Version.Text = "Current Version: " + ProductVersion.ToString();
         }
 
-        private void metroLabel3_Click(object sender, EventArgs e)
-        {
-        }
-
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             ServicePointManager.SecurityProtocol = Tls12;

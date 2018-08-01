@@ -157,7 +157,6 @@
             this.Overview.VerticalScrollbarBarColor = true;
             this.Overview.VerticalScrollbarHighlightOnWheel = false;
             this.Overview.VerticalScrollbarSize = 10;
-            this.Overview.Click += new System.EventHandler(this.Overview_Click);
             // 
             // metroPanel5
             // 
@@ -299,7 +298,6 @@
             this.metroPanel4.VerticalScrollbarBarColor = true;
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
-            this.metroPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel4_Paint);
             // 
             // metroButton3
             // 
@@ -671,7 +669,6 @@
             this.metroTextBox1.UseStyleColors = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // refresh
             // 
@@ -1058,14 +1055,6 @@
             // 
             this.SysInfo.Enabled = true;
             this.SysInfo.Tick += new System.EventHandler(this.SysInfo_Tick);
-            // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
-            // 
-            // ProgressBar
-            // 
-            this.ProgressBar.Tick += new System.EventHandler(this.ProgressBar_Tick);
             // 
             // TaskmgrTimer
             // 
